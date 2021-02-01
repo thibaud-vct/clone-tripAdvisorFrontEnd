@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "tripsans-medium";
+    src: url("https://cache-ssl.celtra.com/api/fonts/b4fbf8dd/2_eade3d10fc83cda660715467e7e4538af9341d5d4d49b2e3d7b96f7ce617e6dd/TripSans-Medium.woff?subset=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiïjklmnoôpqrstuvwxyz1234567890")
+        format("woff");
+}
+@font-face {
+    font-family: "tripsans-bold";
+    src: url("https://cache-ssl.celtra.com/api/fonts/d518128e/2_f610157618f42a29c20357571874b951179279bb3cf10e074d78d079ca0c2280/TripSans-Bold.woff?subset=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiïjklmnopqrstuvwxyz1234567890")
+        format("woff");
+}
+@font-face {
+    font-family: "tripsans-ultra";
+    src: url("https://cache-ssl.celtra.com/api/fonts/e5dd35a2/2_0521afc2e01d4d1075e777b2b969f868f99be855e078752d2cf8aa26aba6f104/TripSans-Ultra.woff?subset=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiïjklmnopqrstuvwxyz1234567890")
+        format("woff");
+}
+@font-face {
+    font-family: "tripsans-vf";
+    src: url("../fonts/TripSans-VF.woff2") format("woff2");
+}

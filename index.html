@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TripAdvisor</title>
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <div class="login">
+            <div>
+                <span>X</span>
+                <img src="./assets/img/logo.svg" alt="logo" />
+                <form id="login" method="POST" action="#">
+                    <p>Connectez-vous</p>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        id="loginEmail"
+                        value=""
+                    />
+                    <input
+                        type="password"
+                        placeholder="Mot de passe"
+                        name="password"
+                        id="loginPassword"
+                        value=""
+                    />
+                    <input type="submit" value="Se connecter" />
+                    <br />
+                </form>
+                <form id="signup" method="POST" action="#">
+                    <p>Créez un compte</p>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        id="email"
+                        value=""
+                    />
+                    <input
+                        type="password"
+                        placeholder="Mot de passe"
+                        name="password"
+                        id="password"
+                        value=""
+                    />
+                    <input
+                        type="password"
+                        placeholder="Confirmation"
+                        name="password"
+                        id="confirm"
+                        value=""
+                    />
+                    <input type="submit" value="S'inscrire" />
+                </form>
+            </div>
+        </div>
+        <div class="burger">
+            <div>
+                <span class="loginBurger">Connectez-vous</span>
+                <ul>
+                    <li>Publier</li>
+                    <li>Alertes</li>
+                    <li>Voyages</li>
+                    <li>Réservations</li>
+                </ul>
+            </div>
+        </div>
+        <header>
+            <div>
+                <nav class="container">
+                    <div class="mobile">
+                        <img
+                            src="./assets/img/icon/burger.svg"
+                            alt="menu burger"
+                        />
+                    </div>
+                    <a href="#"
+                        ><img
+                            src="./assets/img/logo.svg"
+                            alt="logo Tripadvisor"
+                    /></a>
+                    <div>
+                        <form action="">
+                            <input type="text" />
+                            <button type="submit">
+                                <img
+                                    src="./assets/img/icon/search.svg"
+                                    alt="search"
+                                />
+                            </button>
+                        </form>
+                    </div>
+                    <div class="mobile">
+                        <img src="./assets/img/icon/search.svg" alt="" />
+                    </div>
+                    <div class="nav">
+                        <img
+                            src="./assets/img/icon/publish.svg"
+                            class="icon"
+                            alt=""
+                        />
+                        <span>Publier</span>
+                    </div>
+                    <div class="nav">
+                        <img
+                            src="./assets/img/icon/alert.svg"
+                            class="icon"
+                            alt=""
+                        />
+                        <span>Alertes</span>
+                    </div>
+                    <div class="nav">
+                        <img
+                            src="./assets/img/icon/like.svg"
+                            class="icon"
+                            alt=""
+                        />
+                        <span>Voyages</span>
+                    </div>
+                    <span class="loginButton">Connectez-vous</span>
+                </nav>
+            </div>
+        </header>
+        <main class="container">
+            <section>
+                <h1 class="location">
+                    <p>Explorez&nbsp;</p>
+                    <p>Hawaï</p>
+                </h1>
+                <div class="category">
+                    <a href="#">
+                        <span>Hôtels</span
+                        ><img
+                            src="./assets/img/icon/hotels.svg"
+                            class="icon"
+                            alt=""
+                        />
+                    </a>
+                    <a href="#">
+                        <span>Locations de vacances</span
+                        ><img
+                            src="./assets/img/icon/location.svg"
+                            class="icon"
+                            alt=""
+                        />
+                    </a>
+                    <a href="#">
+                        <span>Activités</span
+                        ><img
+                            src="./assets/img/icon/activite.svg"
+                            class="icon"
+                            alt=""
+                        />
+                    </a>
+                    <a href="#">
+                        <span>Restaurants</span
+                        ><img
+                            src="./assets/img/icon/resto.svg"
+                            class="icon"
+                            alt=""
+                        />
+                    </a>
+                    <a href="#">
+                        <span>Forums de voyages</span
+                        ><img
+                            src="./assets/img/icon/forum.svg"
+                            class="icon"
+                            alt=""
+                        />
+                    </a>
+                    <a href="#">
+                        <span>Vols</span
+                        ><img
+                            src="./assets/img/icon/vols.svg"
+                            class="icon"
+                            alt=""
+                        />
+                    </a>
+                    <a href="#">
+                        <span>Croisières</span
+                        ><img
+                            src="./assets/img/icon/boat.svg"
+                            class="icon"
+                            alt=""
+                        />
+                    </a>
+                    <a href="#">
+                        <span>Plus</span
+                        ><img
+                            src="./assets/img/icon/plus.svg"
+                            class="icon"
+                            alt=""
+                        />
+                    </a>
+                </div>
+                <div class="images">
+                    <img src="./assets/img/hawai1.jpg" alt="beach hawaï" />
+                    <div>
+                        <img
+                            src="./assets/img/hawai2.jpg"
+                            alt="maintain hawaï"
+                        />
+                        <img src="./assets/img/hawai3.jpg" alt="city hawaï" />
+                    </div>
+                </div>
+                <div class="subline">
+                    <div>
+                        <a href="#">Etats-Unis&nbsp;</a>
+                        <p>&gt;&nbsp;</p>
+                        <a href="#">Hawaï <span>&dtrif;</span></a>
+                    </div>
+                    <div><p>Visiter : Hawaï</p></div>
+                </div>
+                <div class="sub-session">
+                    <div class="description">
+                        <h2>La destination tropicale par excellence</h2>
+                        <p>
+                            Le mot « vacances » fait penser à des bains de
+                            soleil sur une plage ensoleillée, des baignades dans
+                            une mer bleue étincelante, des siestes sous les
+                            cocotiers. Bref, à Hawaï. Mais vous parvenez à
+                            quitter les sublimes plages de cet État au large du
+                            continent, vous trouverez de nombreuses choses à
+                            voir et à faire. Entre paysages volcaniques et
+                            chutes d'eau cachées ou expéditions inoubliables, un
+                            séjour à Hawaï offre une multitude d'expériences
+                            différentes. Chacune des îles principales de
+                            l'archipel (Kauai, Oahu, Molokai, Lanai, Maui et
+                            l'île d'Hawaï) possède son charme propre et de quoi
+                            vivre des aventures, découvrir des cultures, bien
+                            manger et se détendre.
+                        </p>
+                    </div>
+                    <div class="mademap">
+                        <div>
+                            <div>
+                                <h4>Hawaï: commencez à organiser !</h4>
+                                <p>
+                                    Créez un voyage pour enregistrer et
+                                    organiser toutes vos idées et les visualiser
+                                    sur une carte.
+                                </p>
+                            </div>
+                            <a href="#"><span>Créez un voyage</span></a>
+                        </div>
+                        <div><img src="./assets/img/map.png" alt="" /></div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="separate">
+                    <hr />
+                    <h3>Destinations</h3>
+                    <hr />
+                </div>
+                <div>
+                    <div>
+                        <img
+                            src="./assets/img/49-black-sand-beach.jpg"
+                            alt=""
+                        />
+                        <div>
+                            <img
+                                src="./assets/img/icon/like.svg"
+                                class="icon"
+                                alt=""
+                            />
+                        </div>
+                        <p>Waikoloa, Hawaï</p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/kailua-kona.jpg" alt="" />
+                        <div>
+                            <img
+                                src="./assets/img/icon/like.svg"
+                                class="icon"
+                                alt=""
+                            />
+                        </div>
+                        <p>Kailua-Kona, Hawaï</p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/lahaina.jpg" alt="" />
+                        <div>
+                            <img
+                                src="./assets/img/icon/like.svg"
+                                class="icon"
+                                alt=""
+                            />
+                        </div>
+                        <p>Lahaina,Hawaï</p>
+                    </div>
+                    <div>
+                        <img
+                            src="./assets/img/makawehi-lithified-cliffs.jpg"
+                            alt=""
+                        />
+                        <div>
+                            <img
+                                src="./assets/img/icon/like.svg"
+                                class="icon"
+                                alt=""
+                            />
+                        </div>
+                        <p>Poipu, Hawaï</p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/wailea.jpg" alt="" />
+                        <div>
+                            <img
+                                src="./assets/img/icon/like.svg"
+                                class="icon"
+                                alt=""
+                            />
+                        </div>
+                        <p>Wailea, Hawaï</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div>
+                    <div>
+                        <img src="./assets/img/logo-little.svg" alt="logo" />
+                        <div>
+                            <span
+                                >© 2021 TripAdvisor LLC Tous droits
+                                réservés.</span
+                            >
+                            <div>
+                                <a href="#">Conditions d'utilisation</a>
+                                <a href="#"
+                                    >Confidentialité et utilisation des
+                                    cookies</a
+                                >
+                                <a href="#">Accord d'utilisation des cookies</a>
+                                <a href="#">Plan du site</a>
+                                <a href="#">Fonctionnement du site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button>€ EUR &dtrif;</button
+                        ><button>France &dtrif;</button>
+                    </div>
+                </div>
+                <span
+                    >Cette version de notre site internet s'adresse aux
+                    personnes parlant français en France. Si vous habitez un
+                    autre pays ou une autre région, merci de choisir la version
+                    de Tripadvisor appropriée pour votre pays ou région dans le
+                    menu déroulant. <a href="#">plus</a></span
+                >
+            </div>
+        </footer>
+    </body>
+</html>

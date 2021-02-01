@@ -1,0 +1,694 @@
+@import url("./font.css");
+
+:root {
+    --color-red: #ff5d5d;
+    --color-pink: #faf1ed;
+    --gb-hover-black: #333;
+    --font-size-image-title: 1.1rem;
+    --font-size-text: 20px;
+    --font-size-subline: 0.75rem;
+    --font-size-h1: 54px;
+    --width-desktop: 1281px;
+}
+
+/* ================================================== */
+/* ///////////////// Global rules \\\\\\\\\\\\\\\\\\\ */
+/* ================================================== */
+
+body {
+    font-family: "tripsans-medium", sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+h1 {
+    font-family: "tripsans-ultra";
+    font-size: var(--font-size-h1);
+}
+h2 {
+    font-family: "tripsans-bold";
+    font-size: 2rem;
+}
+h3 {
+    font-family: "tripsans-bold";
+    font-size: 1.9rem;
+    margin: 0 20px;
+}
+h4 {
+    font-family: "tripsans-vf";
+    font-size: 1.95rem;
+}
+.icon {
+    width: 24px;
+    margin: 0 8px;
+}
+.container {
+    width: var(--width-desktop);
+    margin: 0 auto 0 auto;
+}
+
+.mobile {
+    display: none;
+}
+
+/* ================================================== */
+/* =============== Burger element css =============== */
+/* ================================================== */
+
+.burger {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(20, 20, 20, 0.7);
+}
+.burger div {
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    padding: 80px 40px;
+    box-sizing: border-box;
+}
+.burger div span {
+    display: block;
+    padding: 0 20px;
+    width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    line-height: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.burger div ul {
+    margin: 50px 0;
+}
+.burger div li {
+    margin: 0 0 20px 0;
+}
+
+/* ================================================== */
+/* =============== Login element css ================ */
+/* ================================================== */
+
+.login {
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(20, 20, 20, 0.7);
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.login > div {
+    background-color: white;
+    width: 400px;
+    height: 550px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+}
+.login > div > span {
+    align-self: flex-end;
+    cursor: pointer;
+}
+.login img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+.login form {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login input:not([type="submit"]) {
+    font-size: 1rem;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    line-height: 40px;
+    width: 100%;
+}
+.login input[type="submit"] {
+    margin-top: 10px;
+    border: 0px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-family: tripsans-medium;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+.error {
+    border: 2px solid red;
+}
+.valid {
+    border: 2px solid green;
+}
+
+.visible {
+    display: flex;
+}
+
+/* ================================================== */
+/* =============== Header element css =============== */
+/* ================================================== */
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header a img {
+    height: 40px;
+    margin: 5px 0;
+}
+
+header nav div:nth-child(2) {
+    flex-grow: 40;
+}
+
+header nav div:nth-child(2) {
+    padding: 10px 0px;
+}
+
+header nav div form {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 60%;
+    height: 42px;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+header nav div input {
+    width: 100%;
+    height: 42px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: end;
+    outline: none;
+}
+
+header nav div form > button {
+    left: 0px;
+    height: 42px;
+    width: 40px;
+    padding-left: 10px;
+    background-color: transparent;
+    border: 0px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding: 10px 0;
+    margin: 0 3px;
+    line-height: normal;
+    box-sizing: border-box;
+    color: var(--gb-hover-black);
+    border: 2px solid transparent;
+    border-radius: 15px;
+}
+
+.nav img {
+    filter: invert(20%);
+}
+
+.nav:hover {
+    border-color: var(--gb-hover-black);
+    cursor: pointer;
+}
+
+header .loginButton {
+    background-color: black;
+    border-radius: 20px;
+    padding: 0 16px;
+    line-height: 40px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header .loginButton:hover {
+    background-color: var(--gb-hover-black);
+}
+
+/* ================================================== */
+/* =============== Main element css ================= */
+/* ================================================== */
+
+main {
+    padding-top: 40px;
+}
+
+.location {
+    display: flex;
+}
+.location p:first-child {
+    color: var(--color-red);
+}
+
+.category,
+.subline {
+    display: flex;
+    justify-content: space-between;
+}
+.category {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 30px 0;
+}
+.category a:nth-last-child(2) {
+    display: none;
+}
+.category a span {
+    margin: 4px 0;
+}
+.category a {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: calc(100% / 7);
+    border: 1px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.category a:nth-child(n + 2) {
+    margin-left: 20px;
+}
+.category > a:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.category > a:hover img {
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.images {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.images > img:first-child {
+    width: 65%;
+    height: 450px;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+}
+.images > div img {
+    width: 100%;
+    height: 224px;
+    padding-left: 2px;
+    object-fit: cover;
+}
+.images > div img:last-child {
+    border-radius: 0 0 15px 0;
+}
+.images > div img:first-child {
+    border-radius: 0 15px 0 0;
+}
+
+.subline {
+    margin: 20px 0;
+    font-size: var(--font-size-subline);
+    font-family: "tripsans-vf";
+}
+.subline div {
+    display: flex;
+}
+
+.sub-session {
+    display: flex;
+    align-items: flex-start;
+    margin: 50px 0 0 0;
+}
+
+.description p {
+    font-family: "Georgia", "Times New Roman", "Century Schoolbook L", serif;
+    font-weight: lighter;
+    font-size: var(--font-size-text);
+    line-height: 1.5rem;
+    padding: 20px 200px 0 0;
+}
+
+.mademap {
+    width: 500px;
+}
+.mademap > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: var(--color-red);
+    border-radius: 15px 15px 0 0;
+}
+.mademap p {
+    font-family: "tripsans-vf";
+    margin: 20px 0;
+}
+.mademap > div > img {
+    height: 150px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 0 0 15px 15px;
+}
+.mademap > div > a {
+    background-color: black;
+    border-radius: 15px;
+    padding: 17.5px 13px;
+    box-sizing: border-box;
+}
+.mademap > div > a:hover {
+    background-color: #333;
+}
+.mademap > div > a span {
+    color: white;
+    text-decoration: none;
+}
+
+.separate {
+    display: flex;
+    align-items: center;
+    margin: 60px 0 40px 0;
+}
+.separate hr {
+    border-top: 1px solid black;
+    width: 50%;
+}
+
+section:nth-child(2) {
+    margin-bottom: 80px;
+}
+section:nth-child(2) > div {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow-x: scroll;
+}
+section:nth-child(2) > div::-webkit-scrollbar {
+    display: none;
+}
+section:nth-child(2) > div:nth-child(2) div:not(:first-child) {
+    margin: 0 20px;
+}
+section:nth-child(2) > div:nth-child(2) div:first-child {
+    margin-right: 20px;
+}
+section:nth-child(2) > div:nth-child(2) > div {
+    position: relative;
+}
+section:nth-child(2) > div:nth-child(2) > div > img {
+    height: 250px;
+}
+section:nth-child(2) > div:nth-child(2) > div > div img {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+}
+section:nth-child(2) > div:nth-child(2) > div > p {
+    margin-top: 5px;
+    font-size: var(--font-size-image-title);
+}
+
+/* ================================================== */
+/* =============== Footer element css =============== */
+/* ================================================== */
+
+footer {
+    background-color: var(--color-pink);
+}
+footer > div {
+    padding: 30px 0;
+}
+
+footer > div > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+footer > div > div img {
+    width: 40px;
+}
+
+footer > div > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer > div > div > div > div {
+    margin-left: 15px;
+}
+footer > div > div > div > div > div {
+    margin-top: 5px;
+}
+
+footer > div > div > div > div a {
+    margin: 10px 20px 10px 0;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+footer > div > div > div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 4;
+}
+
+footer button {
+    width: 200px;
+    height: 35px;
+    margin-left: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+    font-size: 0.9rem;
+    font-family: tripsans-vf;
+}
+
+footer > div > span,
+footer > div > div span {
+    font-family: "tripsans-vf";
+    font-size: 0.8rem;
+}
+
+footer > div > span {
+    display: block;
+    width: 65%;
+}
+
+footer > div > span a {
+    font-weight: bold;
+}
+
+footer > div > span a:hover {
+    text-decoration: underline;
+}
+
+/* ================================================== */
+/* ****************** Media Devise ****************** */
+/* ================================================== */
+
+@media (max-width: 1330px) {
+    .container {
+        width: 95%;
+        margin: 0 auto 0 auto;
+    }
+
+    .category a:nth-last-child(2) {
+        display: inherit;
+    }
+    .category {
+        flex-wrap: wrap;
+    }
+    .category a {
+        align-items: center;
+        width: calc(100% / 4 - 30px / 4);
+        margin: 10px 0px;
+    }
+    .category a:nth-child(5) {
+        margin-left: 0;
+    }
+    .category a:not(:nth-last-child(4n)) {
+        margin-left: 10px;
+    }
+    .category a span {
+        width: 100%;
+        margin-top: 0;
+    }
+    .category a img {
+        margin: 0;
+    }
+
+    .sub-session {
+        display: inherit;
+    }
+
+    .description p {
+        padding: 20px 0 0 0;
+        margin-bottom: 70px;
+    }
+    .mademap {
+        width: auto;
+        height: 250px;
+        display: flex;
+    }
+    .mademap div:first-child {
+        border-radius: 15px 0 0 15px;
+    }
+    .mademap div img {
+        border-radius: 0 15px 15px 0;
+    }
+    .mademap div > img {
+        height: 100%;
+        width: 100%;
+    }
+    footer > div > div {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    footer > div > div > div:first-child {
+        order: 2;
+    }
+    footer > div > div > div:last-child {
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 0 20px 0;
+    }
+    footer > div > div > div button {
+        width: 48%;
+        margin: 0;
+    }
+    footer > div > span {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        margin: 0 6px;
+    }
+    .nav span {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav > div,
+    .loginButton,
+    .nav {
+        display: none;
+    }
+    .mobile {
+        z-index: 50;
+        display: inherit;
+        width: 24px;
+        cursor: pointer;
+    }
+    header nav a img {
+        width: 133px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .images {
+        margin: 0 -5%;
+    }
+    .images > img:first-child {
+        width: 100%;
+        height: 300px;
+        border-radius: 0;
+        object-fit: cover;
+    }
+    .images > div {
+        display: none;
+    }
+
+    .category {
+        flex-wrap: nowrap;
+        overflow: hidden;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        overflow-x: scroll;
+    }
+    .category::-webkit-scrollbar {
+        display: none;
+    }
+    .category a:nth-child(5) {
+        margin-left: 10px;
+    }
+    .category a {
+        flex: none;
+        width: 166px;
+    }
+
+    .description p {
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+    .mademap {
+        height: 250px;
+        display: inline;
+    }
+    .mademap > div:first-child {
+        border-radius: 15px 15px 0 0;
+    }
+    .mademap div img {
+        height: 200px;
+        border-radius: 0 0 15px 15px;
+    }
+}

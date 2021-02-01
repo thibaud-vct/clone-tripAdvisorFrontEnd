@@ -1,0 +1,4 @@
+<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M12 2C6.478 2 2 6.478 2 11.999 2 17.522 6.478 22 12 22s10-4.478 10-10.001C22 6.478 17.522 2 12 2zm0 17.999c-4.411 0-8-3.589-8-8 0-4.41 3.589-8 8-8s8 3.59 8 8c0 4.411-3.589 8-8 8z"></path>
+<path d="M13 7.336h-2v3.501H7.5v1.999H11v3.5h2v-3.5h3.501v-1.999H13z"></path>
+</svg>
