@@ -51,7 +51,7 @@ $.addEventListener("DOMContentLoaded", () => {
                 };
                 console.log(data);
                 const response = await axios.post(
-                    "http://localhost:3000/signup",
+                    "https://app-tripadvisor.herokuapp.com/signup",
                     data
                 );
                 console.log(response);
@@ -76,7 +76,10 @@ $.addEventListener("DOMContentLoaded", () => {
             password: $.querySelector("#loginPassword").value,
         };
         console.log(data);
-        const response = await axios.post("http://localhost:3000/login", data);
+        const response = await axios.post(
+            "https://app-tripadvisor.herokuapp.com/login",
+            data
+        );
         console.log(response);
         token = response.data.token;
         $.querySelector(".login").classList.remove("visible");
